@@ -167,7 +167,7 @@ class Sequentialmodel(nn.Module):
 
     def fun_f(self, x):
         left = math.gamma(3)/math.gamma(3-self.alpha1)*(x+1)**(2-self.alpha1)
-        f = left - torch.exp(-x)
+        f = left - (x+1)**2
         return f
 
 
